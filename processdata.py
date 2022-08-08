@@ -110,20 +110,18 @@ for id in uids:
     except:
         print('id not found', id)
 
-# for c in patient_averages.columns:
-#     if c!='height' and c!='bmi' and c!='headache_freq' and c!='pain_intensity' and c !='duration_min' and c!='weight' and  c!='incapacitated_degree' and c!='age':
-#         for idx in patient_averages.index:
-#             if patient_averages[c].loc[idx]<=0.33:
-#                 patient_averages[c].loc[idx]=0
-#             elif patient_averages[c].loc[idx]<0.67:
-#                  patient_averages[c].loc[idx]=1
-#             else:
-#                 patient_averages[c].loc[idx]=2
+for c in patient_averages.columns:
+    if c!='height' and c!='bmi' and c!='headache_freq' and c!='pain_intensity' and c !='duration_min' and c!='weight' and  c!='incapacitated_degree' and c!='age':
+        for idx in patient_averages.index:
+            if patient_averages[c].loc[idx]>0:
+                patient_averages[c].loc[idx]=1
+            # elif patient_averages[c].loc[idx]<0.67:
+            #      patient_averages[c].loc[idx]=1
+            # else:
+            #     patient_averages[c].loc[idx]=2
             
 
-        # patient_averages[c].loc[patient_averages[c]<=0.3]=0
-        # patient_averages[c].loc[patient_averages[c]>0.3 & patient_averages[c]<=0.67]=1
-        # patient_averages[c].loc[patient_averages[c]>0.67]=2
+      
 
 patient_averages = patient_averages.drop(['exercise',
 'no_exercise',

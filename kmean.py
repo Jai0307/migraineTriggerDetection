@@ -11,7 +11,7 @@ TRIAL = 1
 
 filename = 'patientavgs.csv'
 pddata = pd.DataFrame(pd.read_csv(filename, header=0))
-dropcols = ['ID', 'height', 'stress',
+dropcols = ['ID', 'height', 
        'oversleeping', 'lack_of_sleep', 'fatigue',
        'menstrual_cycle', 'weather_temp_change',
        'noise', 'specific_smell',
@@ -19,8 +19,8 @@ dropcols = ['ID', 'height', 'stress',
        'other_triggers1', 'other_triggers2',
        'help_sleep', 'help_rest', 'help_massage_or_stretching',
        'help_exercise', 'help_other',  'gourmet', 'incapacitated_degree',  'throbbing1', 'no_housework', 
-       'headache_freq', 'duration_min',  'pain_intensity', 'left_side', 'right_side', 'middle', 'both_sides','sensitivity_to_light', 'light_noise_sensitivity', 'unilateral', 'sensitive_to_sound', 'worse_with_movement', 'nausea_vomiting', 'around_the_eyes',  'weight' ,'back_of_the_neck', 'sex','age', ]
-# 'bmi', 'tight_headache', 'throbbing2', 'dull_heavy_headache', 'throw_up',
+        'left_side', 'right_side', 'middle', 'both_sides','sensitivity_to_light', 'light_noise_sensitivity',  'sensitive_to_sound', 'worse_with_movement',   'back_of_the_neck', 'throw_up', 'nausea_vomiting','stress','around_the_eyes','sex', 'bmi', 'weight',]
+# 'age',  'tight_headache', 'throbbing2', 'dull_heavy_headache',  'unilateral', 'duration_min', 'pain_intensity', 'headache_freq',
 
 ids = pddata['ID']
 pddata = pddata.drop(dropcols, axis=1)
@@ -59,14 +59,14 @@ for k in K:
     silhouette_score.append(silhouttescore)
 
 sil_data = np.array(silhouette_score)
-print('optimal cluster: ', 2+np.argmin(-1*sil_data))
+print('clusters:', 2+np.argmin(-1*sil_data))
 
 print(np)
 
-plt.xlabel('K')
-plt.ylabel('Within-Cluster-Sum of Squared Errors (WSS)')
-plt.plot(K,wss)
-plt.show()
+# plt.xlabel('K')
+# plt.ylabel('Within-Cluster-Sum of Squared Errors (WSS)')
+# plt.plot(K,wss)
+# plt.show()
 ###########################################################
 ###########################################################
     
