@@ -18,9 +18,9 @@ dropcols = ['ID', 'height',
        'irregular_meals', 
        'other_triggers1', 'other_triggers2',
        'help_sleep', 'help_rest', 'help_massage_or_stretching',
-       'help_exercise', 'help_other',  'gourmet', 'incapacitated_degree',  'throbbing1', 'no_housework', 
-        'left_side', 'right_side', 'middle', 'both_sides','sensitivity_to_light', 'light_noise_sensitivity',  'sensitive_to_sound', 'worse_with_movement',   'back_of_the_neck', 'throw_up', 'nausea_vomiting','stress','around_the_eyes','sex',  'weight',]
-# 'age',  'tight_headache', 'throbbing2', 'dull_heavy_headache',  'unilateral', 'duration_min', 'pain_intensity', 'headache_freq','bmi',
+       'help_exercise', 'help_other',  'gourmet', 'incapacitated_degree',  'throbbing2', 'no_housework', 
+        'sensitivity_to_light', 'light_noise_sensitivity',  'sensitive_to_sound', 'worse_with_movement',  'stress','around_the_eyes',  'weight','unilateral','age', 'bmi','duration_min', 'headache_freq','pain_intensity',  'sex',]
+# 'tight_headache', 'throbbing1', 'dull_heavy_headache',   'back_of_the_neck', 'throw_up','nausea_vomiting','left_side', 'right_side', 'middle', 'both_sides',
 
 ids = pddata['ID']
 pddata = pddata.drop(dropcols, axis=1)
@@ -34,9 +34,9 @@ print(pddata.index)
     #    'tight_headache', 'throbbing2', 'dull_heavy_headache'], axis=1))
 
 # print(pddata.columns)
-scaler = MinMaxScaler()
-scaled = scaler.fit_transform(pddata)
-pddata_scaled = pd.DataFrame(scaled, columns=pddata.columns)
+# scaler = MinMaxScaler()
+# scaled = scaler.fit_transform(pddata)
+# pddata_scaled = pd.DataFrame(scaled, columns=pddata.columns)
 # print(pddata_scaled.sum(axis=0))
 
 K = range(2, 50)
@@ -49,11 +49,11 @@ print(pddata.columns)
 ###########################################################
 for k in K:
     km = KMeans(n_clusters=k, init='k-means++')
-    km=km.fit(pddata_scaled)
+    km=km.fit(pddata)
     wss_iter = km.inertia_
     wss.append(wss_iter)
-    labels=cluster.KMeans(n_clusters=k,random_state=200).fit(pddata_scaled).labels_
-    silhouttescore = metrics.silhouette_score(pddata_scaled,labels,metric="euclidean",sample_size=1000,random_state=0)
+    labels=cluster.KMeans(n_clusters=k,random_state=200).fit(pddata).labels_
+    silhouttescore = metrics.silhouette_score(pddata,labels,metric="euclidean",sample_size=1000,random_state=0)
     print ("Silhouette score for k(clusters) = "+str(k)+" is "
     +str(silhouttescore))
     silhouette_score.append(silhouttescore)

@@ -1,4 +1,3 @@
-from operator import index
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -110,15 +109,15 @@ for id in uids:
     except:
         print('id not found', id)
 
-for c in patient_averages.columns:
-    if c!='height' and c!='bmi' and c!='headache_freq' and c!='pain_intensity' and c !='duration_min' and c!='weight' and  c!='incapacitated_degree' and c!='age':
-        for idx in patient_averages.index:
-            if patient_averages[c].loc[idx]>0:
-                patient_averages[c].loc[idx]=1
-            # elif patient_averages[c].loc[idx]<0.67:
-            #      patient_averages[c].loc[idx]=1
-            # else:
-            #     patient_averages[c].loc[idx]=2
+# for c in patient_averages.columns:
+#     if c!='height' and c!='bmi' and c!='headache_freq' and c!='pain_intensity' and c !='duration_min' and c!='weight' and  c!='incapacitated_degree' and c!='age':
+#         for idx in patient_averages.index:
+#             if patient_averages[c].loc[idx]<.33:
+#                 patient_averages[c].loc[idx]=0
+#             elif patient_averages[c].loc[idx]<0.67:
+#                  patient_averages[c].loc[idx]=1
+#             else:
+#                 patient_averages[c].loc[idx]=2
             
 
       
