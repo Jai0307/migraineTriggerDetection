@@ -1,0 +1,28 @@
+\begin{tabular}{lrrr}
+\toprule
+{} &  Migraine &  Headache &  p-value \\
+\midrule
+stress              &     36.01 &     24.02 &     0.00 \\
+oversleeping        &      2.38 &      2.23 &     0.10 \\
+lack of sleep       &     24.40 &     18.64 &     0.00 \\
+exercise            &      1.49 &      1.31 &     0.00 \\
+no exercise         &      1.19 &      1.44 &     0.00 \\
+fatigue             &     22.32 &     19.95 &     0.00 \\
+menstruation        &     18.45 &      6.82 &     0.00 \\
+ovulation           &      2.08 &      0.92 &     0.29 \\
+emotional change    &      7.44 &      5.12 &     0.00 \\
+weather temp change &      8.04 &     10.76 &     0.00 \\
+excessive sunlight  &      1.79 &      2.10 &     0.00 \\
+noise               &      8.04 &      2.62 &     0.00 \\
+inadequate lighting &      1.19 &      0.26 &     0.00 \\
+odors               &      9.23 &      3.94 &     0.00 \\
+drinking            &      6.25 &      2.23 &     0.00 \\
+irregular meals     &      8.93 &      4.46 &     0.00 \\
+surfeit             &      4.46 &      1.31 &     0.00 \\
+caffeine            &      2.38 &      2.23 &     0.00 \\
+smoking             &      0.60 &      1.05 &     0.74 \\
+cheese\_chocolate    &      1.49 &      0.00 &     0.01 \\
+travel              &      3.27 &      0.79 &     0.00 \\
+other triggers      &     16.37 &     12.20 &     0.00 \\
+\bottomrule
+\end{tabular}

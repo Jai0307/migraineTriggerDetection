@@ -1,0 +1,25 @@
+\begin{tabular}{lrrr}
+\toprule
+{} &  Migraine &  Headache &  p-value \\
+\midrule
+left\_side         &     36.63 &     63.37 &     0.00 \\
+right\_side        &     38.96 &     61.04 &     0.00 \\
+middle            &     28.63 &     71.37 &     0.50 \\
+both\_sides        &     34.75 &     65.25 &     0.05 \\
+around\_eyes       &     41.28 &     58.72 &     0.00 \\
+back\_of\_neck      &     30.49 &     69.51 &     1.00 \\
+unilateral        &     35.34 &     64.66 &     0.00 \\
+throbbing\_1       &     44.92 &     55.08 &     0.00 \\
+tight\_head        &     48.15 &     51.85 &     0.00 \\
+throbbing\_2       &     36.54 &     63.46 &     0.00 \\
+dull\_heavy        &     25.63 &     74.37 &     0.02 \\
+worsen\_move       &     48.84 &     51.16 &     0.00 \\
+food              &     90.44 &      9.56 &     0.00 \\
+noise\_sensitivity &     53.74 &     46.26 &     0.00 \\
+throw\_up          &     98.15 &      1.85 &     0.00 \\
+nausea\_vomit      &     90.91 &      9.09 &     0.00 \\
+smell             &     55.56 &     44.44 &     0.00 \\
+light             &     65.64 &     34.36 &     0.00 \\
+light\_noise       &     84.50 &     15.50 &     0.00 \\
+\bottomrule
+\end{tabular}
